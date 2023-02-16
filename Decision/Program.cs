@@ -1,4 +1,6 @@
 ﻿string[] ReadyArray = {"hello", "2", "world", ":-)"};
+string[] NewArray = CreateNewArray(ReadyArray);
+Console.Write($"{String.Join(", ", ReadyArray)}");
 
 //Метод создания массива по условиям задачи
 string[] CreateNewArray(string[] ReadyArray)
