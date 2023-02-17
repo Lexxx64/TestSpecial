@@ -1,12 +1,47 @@
-﻿string[] ReadyArray = { "hello", "2", "world", ":-)" };
-string[] NewArray = CreateNewArray(ReadyArray);
-Console.WriteLine($"Заданный массив: {String.Join(", ", ReadyArray)}");
-Console.Write($"Новый массив: {String.Join(" ", NewArray)}");
+﻿// string[] ReadyArray = { "hello", "2", "world", ":-)" };
+// string[] NewArray = CreateNewArray(ReadyArray);
+// Console.WriteLine($"Заданный массив: {String.Join(", ", ReadyArray)}");
+// Console.Write($"Новый массив: {String.Join(" ", NewArray)}");
 
-//Метод создания массива по условиям задачи
-string[] CreateNewArray(string[] ReadyArray)
+// //Метод создания массива по условиям задачи
+// string[] CreateNewArray(string[] ReadyArray)
+// {
+//     int count = 0;
+//     for (int i = 0; i < ReadyArray.Length; i++)
+//     {
+//         if (ReadyArray[i].Length <= 3)
+//         {
+//             ReadyArray[count] = ReadyArray[i];
+//             count++;
+//         }
+//     }
+//     return ReadyArray;
+// }
+string[] ReadyArray = { "hello", "2", "world", ":-)" };
+int size = GetCountArray(ReadyArray);
+string[] NewArray = CreateNewArray(ReadyArray, size);
+Console.WriteLine($"[{String.Join(", ", (ReadyArray))}]");
+Console.Write($"[{String.Join(", ", (NewArray))}]");
+
+//метод проверки массива на соответствие условиям
+//возвращаем счетик для нового массива
+int GetCountArray(string[] ReadyArray)
 {
-    string[] NewArray = new string[ReadyArray.Length];
+    int count = 0;
+    foreach ( string el in ReadyArray)
+    {
+        if (el.Length <= 3)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+// //Метод создания массива по условиям задачи
+string[] CreateNewArray(string[] ReadyArray, int size)
+{
+    string[] NewArray = new string[size];
     int count = 0;
     for (int i = 0; i < ReadyArray.Length; i++)
     {
