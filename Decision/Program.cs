@@ -1,23 +1,4 @@
-﻿// string[] ReadyArray = { "hello", "2", "world", ":-)" };
-// string[] NewArray = CreateNewArray(ReadyArray);
-// Console.WriteLine($"Заданный массив: {String.Join(", ", ReadyArray)}");
-// Console.Write($"Новый массив: {String.Join(" ", NewArray)}");
-
-// //Метод создания массива по условиям задачи
-// string[] CreateNewArray(string[] ReadyArray)
-// {
-//     int count = 0;
-//     for (int i = 0; i < ReadyArray.Length; i++)
-//     {
-//         if (ReadyArray[i].Length <= 3)
-//         {
-//             ReadyArray[count] = ReadyArray[i];
-//             count++;
-//         }
-//     }
-//     return ReadyArray;
-// }
-string[] ReadyArray = { "hello", "2", "world", ":-)" };
+﻿string[] ReadyArray = { "hello", "2", "world", ":-)" };
 int size = GetCountArray(ReadyArray);
 string[] NewArray = CreateNewArray(ReadyArray, size);
 Console.WriteLine($"[{String.Join(", ", (ReadyArray))}]");
@@ -28,7 +9,7 @@ Console.Write($"[{String.Join(", ", (NewArray))}]");
 int GetCountArray(string[] ReadyArray)
 {
     int count = 0;
-    foreach ( string el in ReadyArray)
+    foreach (string el in ReadyArray)
     {
         if (el.Length <= 3)
         {
